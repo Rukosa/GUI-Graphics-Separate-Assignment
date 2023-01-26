@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="MichaelM_js1.js"></script>
+        <style>
+            tr:nth-child(even) {background-color: lightgrey;}
+        </style>
+    </head>
+    <body>
+        <h1>Javascript Assignment 1 Form</h1>
+        <div id="form" style="font-size: large;">
+        <form>
+            <label for="city">Your City:</label><br>
+            <input type="text" id="city" name="city" placeholder="City name" maxlength="20"><br>
+
+            <label for="zip">Zipcode:</label><br>
+            <input type="text" id="zip" name="zip" placeholder="5 digit code" maxlength="5"><br>
+
+            <label for="restaurants">Favorite Restaurants:</label><br>
+            <input type="text" id="restaurants" name="restaurants" placeholder="Input one at a time" maxlength="25"><br>
+            <button type="button" id="addRestaurant" style="height: 30px; width: 100px;">Add Restaurant</button>
+        </form>
+        <table id="inTable">
+            <tbody id="inTBody">
+            </tbody>
+        </table>
+        <br>
+        <button type="button" id="submit" style="height: 30px; width: 100px;">Submit</button>
+        </div>
+        <table hidden id="outTable">
+            <tbody id="outTBody">
+                <tr>
+                    <th>City</th> 
+                    <th>Zip</th>
+                    <th>Restaurants</th>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
