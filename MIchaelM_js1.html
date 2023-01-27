@@ -3,8 +3,14 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="MichaelM_js1.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             tr:nth-child(even) {background-color: lightgrey;}
+
+            .checked {
+                color: orange;
+            }
         </style>
     </head>
     <body>
@@ -20,6 +26,13 @@
             <label for="restaurants">Favorite Restaurants:</label><br>
             <input type="text" id="restaurants" name="restaurants" placeholder="Input one at a time" maxlength="25"><br>
             <button type="button" id="addRestaurant" style="height: 30px; width: 100px;">Add Restaurant</button>
+
+            <span id="star1" class="fa fa-star checked"></span>
+            <span id="star2" class="fa fa-star"></span>
+            <span id="star3" class="fa fa-star"></span>
+            <span id="star4" class="fa fa-star"></span>
+            <span id="star5" class="fa fa-star"></span>
+
         </form>
         <table id="inTable">
             <tbody id="inTBody">
@@ -28,14 +41,25 @@
         <br>
         <button type="button" id="submit" style="height: 30px; width: 100px;">Submit</button>
         </div>
-        <table hidden id="outTable">
+        <div hidden id="tableDisplay">
+        <label for="rating">Filter Rating:</label>
+        <select id="rating" name="rating">
+            <option value="1">1 Star</option>
+            <option value="2">2 Star</option>
+            <option value="3">3 Star</option>
+            <option value="4">4 Star</option>
+            <option value="5">5 Star</option>
+        </select>
+        <table id="outTable">
             <tbody id="outTBody">
                 <tr>
                     <th>City</th> 
                     <th>Zip</th>
                     <th>Restaurants</th>
+                    <th>Rating</th>
                 </tr>
             </tbody>
         </table>
+        </div>
     </body>
 </html>
